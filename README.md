@@ -47,3 +47,35 @@ This is a simple journal application that uses the Gemini API to analyze the moo
     ```
     cd frontend
     npm start
+    ```
+
+## Deployment on Render
+
+To deploy this application on Render, you will need to create two services: a **Web Service** for the backend and a **Static Site** for the frontend.
+
+### Backend Deployment (Web Service)
+
+1.  **Create a new Web Service on Render.**
+2.  **Connect your GitHub repository.**
+3.  **Use the following settings:**
+    *   **Name:** `ai-journal-backend` (or any name you prefer)
+    *   **Root Directory:** `backend`
+    *   **Environment:** `Python 3`
+    *   **Build Command:** `pip install -r requirements.txt`
+    *   **Start Command:** `uvicorn server:app --host 0.0.0.0 --port 10000`
+4.  **Add an environment variable:**
+    *   **Key:** `GEMINI_API_KEY`
+    *   **Value:** Your Gemini API key
+
+### Frontend Deployment (Static Site)
+
+1.  **Create a new Static Site on Render.**
+2.  **Connect your GitHub repository.**
+3.  **Use the following settings:**
+    *   **Name:** `ai-journal-frontend` (or any name you prefer)
+    *   **Root Directory:** `frontend`
+    *   **Build Command:** `npm install && npm run build`
+    *   **Publish Directory:** `build`
+4.  **Add an environment variable:**
+    *   **Key:** `REACT_APP_BACKEND_URL`
+    *   **Value:** The URL of your backend service (e.g., `https://ai-journal-backend.onrender.com`)
