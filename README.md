@@ -15,6 +15,13 @@ This is a simple journal application that uses the Gemini API to analyze the moo
 *   **Backend:** Python, FastAPI
 *   **AI:** Google Gemini
 
+## Sample Journal Entries
+
+| Title         | Content                                                                                                  | Mood         | Summary                                 |
+|---------------|----------------------------------------------------------------------------------------------------------|--------------|------------------------------------------|
+| A Great Day   | Today was a great day. I went to the park and had a picnic with my friends. The weather was perfect.     | happy        | A happy day spent with friends at the park. |
+| A Tough Day   | Today was a tough day. I had a lot of work to do and I felt overwhelmed. I hope tomorrow is better.      | overwhelmed  | A tough day with a lot of work.          |
+
 ## Setup and Installation
 
 1.  **Clone the repository:**
